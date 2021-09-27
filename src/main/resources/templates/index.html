@@ -24,7 +24,7 @@
         </thread>
         <tbody>
             <tr th:each="event : ${events}">
-            <td><span th:text="${event.name}"></span></td>
+            <td><a th:href="@{/eventDetails/{code}(code=${event.code})}"><span th:text="${event.name}"></span></a></td>
             <td><span th:text="${event.locale}"></span></td>
             <td><span th:text="${event.date}"></span></td>
             <td><span th:text="${event.hour}"></span></td>
